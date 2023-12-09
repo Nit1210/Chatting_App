@@ -1,0 +1,34 @@
+.container{
+    max-width: 600px;
+  }
+  .btn{
+    background: #43d9be;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .btn:hover{
+   color : #43d9be;
+   background: white;
+
+  }
+  .btn:focus{
+    padding: 10px;
+    outline: none !important;
+  }
+  .list-group-item{
+    margin: 2px;
+    background-color: rgb(161, 203, 161);
+    border: 1px solid black;
+  }
+  .username{
+    font-weight: bold;
+  }
+  .time{
+    font-size: 0.7em;
+  }
+  .new-name{
+    position: absolute;
+    left: 70%;
+    top: 0%;
+  }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chatting-app</title>
+</head>
+<body>
+     <div class="container-fluid my-3">
+        <!-- APP Title -->
+       <h1 class="my-4 text-center ">Chatting-app</h1>
+      <!-- chatroom buttons -->
+      <div class="chat-rooms mb-3 text-center">
+        <div class="my-2"> choose a chat room:</div>
+        <button class="btn" id="general">#general</button>
+        <button class="btn" id="technical">#technical</button>
+        <button class="btn" id="music">#music</button>
+      </div>
+      <!-- chat list / window -->
+    <div class="chat-window">
+        <ul class="chat-list list-group"></ul>
+      </div>
+      <!-- new chat form -->
+      <form class="new-chat my-3">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Your message:</div>
+          </div>
+          <input type="text" id="message" class="form-control" required>
+          <div class="input-group-append">
+            <input type="submit" class="btn" value="send">
+          </div>
+        </div>
+      </form>
+      <!-- update name form -->
+      <form class="new-name my-3">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Update name:</div>
+          </div>
+          <input type="text" id="name" class="form-control" required>
+          <div class="input-group-append">
+            <input type="submit" class="btn" value="update">
+          </div>
+        </div>
+        <div class="update-mssg"></div>
+      </form>
+     </div>
+
+     <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script type="module" src="Scripts/app.js"></script>
+    <script type="module" src="Scripts/chat.js"></script>
+    <script src="Scripts/ChatUI.js"></script>
+    <script type="module" src="Scripts/firestore.js"></script>
+</body>
+</html>
