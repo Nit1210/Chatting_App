@@ -48,6 +48,9 @@ class chatting_room
     {
         const docref= await getDocs(this.charts);
         docref.docs
+        .filter((document)=>{
+           return  (document.data().username !== username);
+        })
         .forEach(async (document) => 
         {
             //  if (document.data().username !== username) 
@@ -64,6 +67,8 @@ class chatting_room
                 console.log("This name is taken. enter another name");
              }
         });
+
+        
       
           
     }

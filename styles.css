@@ -19,7 +19,7 @@
   .list-group-item{
     margin: 2px;
     background-color: rgb(161, 203, 161);
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
   }
   .username{
     font-weight: bold;

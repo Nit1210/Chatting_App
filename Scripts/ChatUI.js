@@ -16,7 +16,6 @@ class chatUI{
           <div class="time">${when}</div>
         </li>
         `;
-        
         console.log("chatUI "+data.room);
       
     }

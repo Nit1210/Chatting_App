@@ -18,12 +18,13 @@ add_chatForm.addEventListener('submit',e=>{
 })
 
 //Update username from UI
-newNameForm.addEventListener('submit',e=>{
+newNameForm.addEventListener('submit',async e=>{
     e.preventDefault();
      const NewName=newNameForm.name.value.trim();
      chartroom.updateUsername(NewName);
+     console.log("Update username Intiated ")
      chat.clear();
-     chartroom.getChats((chat_data)=>
+    await chartroom.getChats((chat_data)=>
      {
         chat.render(chat_data);
      });
@@ -41,7 +42,7 @@ updateRoom.addEventListener('click',e=>{
     console.log(room);
     chartroom.getChats((chat_data)=>{
         chat.render(chat_data);
-        console.log("render call done");
+       // console.log("render call done");
     });
     localStorage.setItem('room',room);
    }
