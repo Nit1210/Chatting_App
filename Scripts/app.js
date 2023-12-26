@@ -1,5 +1,7 @@
 import { chatting_room } from "./chat.js";
-
+import {chatUI} from "./ChatUI.js";
+import "./firestore.js"
+import "../styles.css"
 //Dom queries
 const chat_list=document.querySelector(".chat-list");
 const add_chatForm=document.querySelector(".new-chat");

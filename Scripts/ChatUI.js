@@ -1,4 +1,4 @@
-class chatUI{
+export class chatUI{
     constructor(classList){
        this.List=classList
        console.log(this.List)
