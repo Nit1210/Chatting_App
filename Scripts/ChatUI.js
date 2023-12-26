@@ -1,3 +1,4 @@
+import { formatDistanceToNow} from 'date-fns'
 export class chatUI{
     constructor(classList){
        this.List=classList
@@ -7,7 +8,7 @@ export class chatUI{
         this.List.innerHTML=``;
     }
     render(data){
-        const when =dateFns.distanceInWordsToNow(data.created_at.toDate(),{addSuffix:true});
+        const when =formatDistanceToNow(data.created_at.toDate(),{addSuffix:true});
         this.List.innerHTML+=`
         <li class="list-group-item" >
           <span class="username">${data.username}: </span>

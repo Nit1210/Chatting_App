@@ -1,5 +1,5 @@
 import { chatting_room } from "./chat.js";
-import {chatUI} from "./ChatUI.js";
+import {chatUI} from "./ChatUI.js"
 import "./firestore.js"
 import "../styles.css"
 //Dom queries
@@ -8,7 +8,7 @@ const add_chatForm=document.querySelector(".new-chat");
 const newNameForm=document.querySelector(".new-name");
 const userName= document.querySelectorAll(".username");
 const updateRoom=document.querySelector(".chat-rooms");
-const chat=new chatUI(chat_list);
+const chat= new chatUI(chat_list);
 let room_type='general';
 //add chat form UI
 add_chatForm.addEventListener('submit',e=>{

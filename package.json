@@ -4,6 +4,7 @@
     "@babel/core": "^7.23.6",
     "babel-loader": "^9.1.3",
     "css-loader": "^6.8.1",
+    "date-fns": "^3.0.6",
     "firebase": "^10.7.1",
     "firebase-tools": "^13.0.2",
     "styles-loader": "^4.0.1",
