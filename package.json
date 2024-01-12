@@ -7,9 +7,11 @@
     "date-fns": "^3.0.6",
     "firebase": "^10.7.1",
     "firebase-tools": "^13.0.2",
+    "gh-pages": "^6.1.1",
     "styles-loader": "^4.0.1",
     "webpack": "^5.89.0"
   },
+  "homepage": "https://nit1210.github.io/Chatting_App/",
   "name": "chatting_app",
   "version": "1.0.0",
   "description": "Chatting Application",
@@ -22,6 +24,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "node_modules/.bin/webpack --mode production",
     "server": "webpack-dev-server --mode development"
