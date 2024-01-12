@@ -1,34 +1,138 @@
-.container{
+.main{
+  display: none;
+}
+.main.active{
+  display: inline;
+  
+}
+.main.active .container{
     max-width: 600px;
   }
-  .btn{
+  .main.active .btn{
     background: #43d9be;
     color: white;
     outline: none !important;
     box-shadow: none !important;
   }
-  .btn:hover{
+  .main.active .btn:hover{
    color : #43d9be;
    background: white;
 
   }
-  .btn:focus{
+  .main.active .btn:focus{
     padding: 10px;
     outline: none !important;
   }
-  .list-group-item{
+  .main.active .list-group-item{
     margin: 2px;
     background-color: rgb(161, 203, 161);
     border: 1px solid rgb(0, 0, 0);
+    border-bottom-left-radius: -1%;
   }
-  .username{
+  .main.active .username{
     font-weight: bold;
   }
-  .time{
+  .main.active .filename{
+    cursor:pointer;
+
+  }
+
+  .main.active .filesize{
+    font-size: 0.8em;
+    font-family:'Times New Roman', Times, serif;
+    
+  }
+  .main.active .time{
     font-size: 0.7em;
   }
-  .new-name{
+  .main.active .new-name{
     position: absolute;
     left: 70%;
     top: 0%;
+    
   }
+
+ .main.active .input-group-file{
+  width:4%;
+ }
+ 
+ .main.active .addfile:hover{
+   content: "add a file";
+ }
+
+/* Bordered form */
+.login.active form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+.login.active input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.login.active button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+.login.active button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.login.active .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.login.active .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+.login.active img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.login.active .container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+.login.active span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.login{
+  display: none;
+}
+.login.active{
+  display: inline;
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  .login.active span.psw {
+    display: block;
+    float: none;
+  }
+  .login.active .cancelbtn {
+    width: 100%;
+  }
+}

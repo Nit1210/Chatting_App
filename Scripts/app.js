@@ -4,12 +4,51 @@ import "./firestore.js"
 import "../styles.css"
 //Dom queries
 const chat_list=document.querySelector(".chat-list");
+const body=document.querySelector(".main");
+const login=document.querySelector(".login");
 const add_chatForm=document.querySelector(".new-chat");
 const newNameForm=document.querySelector(".new-name");
 const userName= document.querySelectorAll(".username");
 const updateRoom=document.querySelector(".chat-rooms");
+let selectedFiles = document.getElementById("input");
 const chat= new chatUI(chat_list);
 let room_type='general';
+
+//login auth
+login.addEventListener('submit',e=>{
+   e.preventDefault();
+   login.classList.remove("active");
+   //after auth activating main page
+   body.classList.add("active");
+});
+
+
+//adding file to storage
+selectedFiles.addEventListener('change', async () => {
+   const files = selectedFiles.files;
+   console.log(files);
+
+   for (let i = 0; i < files.length; i++) {
+       console.log("passing " + files[i].name + " to cloud");
+
+       try {
+           const message = await chartroom.uploadfile(files[i]);
+           console.log(message);
+           selectedFiles.files = null;
+       } catch (err) {
+           console.error(err);
+       }
+   }
+});
+
+//download file from storage
+chat_list.addEventListener('click',e=>{
+        if(e.target.className==='filename'){
+            let file=e.target.innerHTML;
+           chartroom.downloadfile(file);
+        }
+});
+
 //add chat form UI
 add_chatForm.addEventListener('submit',e=>{
     e.preventDefault();
@@ -20,14 +59,15 @@ add_chatForm.addEventListener('submit',e=>{
 })
 
 //Update username from UI
-newNameForm.addEventListener('submit',async e=>{
+newNameForm.addEventListener('submit', e=>{
     e.preventDefault();
      const NewName=newNameForm.name.value.trim();
      chartroom.updateUsername(NewName);
      console.log("Update username Intiated ")
      chat.clear();
-    await chartroom.getChats((chat_data)=>
+    chartroom.getChats((chat_data)=>
      {
+        console.log("entered getChats function");
         chat.render(chat_data);
      });
      //Reset form

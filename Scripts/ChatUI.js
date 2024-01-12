@@ -9,6 +9,17 @@ export class chatUI{
     }
     render(data){
         const when =formatDistanceToNow(data.created_at.toDate(),{addSuffix:true});
+       if(data.filename){
+           this.List.innerHTML+=`
+           <li class="list-group-item" >
+           <span class="username">${data.username}: </span>
+           <br>
+           <a class="filename" href="${data.path}">${data.filename}</a>
+           <div class="filesize">Size:${data.size}</div>
+           <div class="time">${when}</div>
+         </li>`
+       }
+       else{
         this.List.innerHTML+=`
         <li class="list-group-item" >
           <span class="username">${data.username}: </span>
@@ -17,7 +28,9 @@ export class chatUI{
           <div class="time">${when}</div>
         </li>
         `;
-        console.log("chatUI "+data.room);
+        
+       }
+       
       
     }
 }
