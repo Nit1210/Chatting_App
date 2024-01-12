@@ -25,7 +25,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "main -d Dist/assets",
+    "deploy": "gh-pages -d Dist/assets",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node_modules/.bin/webpack --mode production",
     "server": "webpack-dev-server --mode development"
