@@ -27,7 +27,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "node_modules/.bin/webpack --mode production",
+    "build": "node_modules/.bin/webpack --mode production",
     "server": "webpack-dev-server --mode development"
   },
   "author": "Nitesh Kalyan Koilada",
