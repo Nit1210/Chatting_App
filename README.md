@@ -10,10 +10,14 @@
 
 ## File Structure:
 
+### Scripts/
 - **index.html:** HTML file for the main application interface.
 - **app.js:** JavaScript file handling UI interactions and Firestore communication.
 - **chat.js:** JavaScript file defining the ChattingRoom class for managing chats.
 - **ChatUI.js:** JavaScript file defining the ChatUI class for rendering chat messages.
+### /
+- **styles.css:** Style functions related to the application.
+- **webpack.config.cjs:** This file contains the config related to the webpack modules.
 
 
 
