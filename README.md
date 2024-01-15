@@ -1,8 +1,5 @@
 # Chatting APP
-### This is a chatting application built using HTML, CSS, Bootstrap, Javascript, Babel, Webpack, NoSQL Database, and Firestore storage. 
-### This app allows Users to chat with text messages and upload files in various rooms and also maintains communication data as per room.
-### It also handles n Number of messages and supports N number of users to chat and communicate with each other. 
-### The Users can also Upload Files along with text messages.
+### Chatting-app is a simple chat application with login authentication, multiple chat rooms, and file upload/download capabilities. The application is built using HTML, Bootstrap, and JavaScript. The application is built using HTML, CSS, Bootstrap, Javascript, Babel, and Webpack. It uses Firestore for real-time data storage and retrieval. 
 
 ## Features
 
@@ -11,7 +8,13 @@
 - **Real-time Chat:** See messages and files in real-time.
 - **File Upload:** Upload files to share with others.
 
-## App.js 
-### This file contains the DOM functions. Where the HTML elements are modified by calling the functions in Chat.js.
+## File Structure:
+
+- **index.html:** HTML file for the main application interface.
+- **app.js:** JavaScript file handling UI interactions and Firestore communication.
+- **chat.js:** JavaScript file defining the ChattingRoom class for managing chats.
+- **ChatUI.js:** JavaScript file defining the ChatUI class for rendering chat messages.
+
+
 
 ## Fix Pending: In Chat.js the update name condition needs a modification. Need to check on the if condition and if possible add a filter method instead of the if condition.
