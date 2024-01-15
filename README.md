@@ -21,4 +21,5 @@
 
 
 
-## Fix Pending: In Chat.js the update name condition needs a modification. Need to check on the if condition and if possible add a filter method instead of the if condition.
+## **Fix Pending:** 
+#### In Chat.js the update name condition needs a modification. Need to check on the if condition and if possible add a filter method instead of the if condition.
