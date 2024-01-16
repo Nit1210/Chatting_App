@@ -140,12 +140,30 @@
   display: inline;
 }
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 1000px) {
   .login.active span.psw {
     display: block;
     float: none;
   }
   .login.active .cancelbtn {
     width: 100%;
+  }
+  .main.active .new-name{
+    position: relative;
+    left:0%;
+    width:100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .login.active span.psw {
+    display: block;
+    float: none;
+  }
+  .login.active .cancelbtn {
+    width: 100%;
+  }
+  .main.active #message.form-control{
+   
+    width:85%;
   }
 }

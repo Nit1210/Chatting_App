@@ -97,7 +97,7 @@ class chatting_room {
             console.log('Uploaded ' + file.name);
             
         });
-        getDownloadURL(storageRef)
+       await getDownloadURL(storageRef)
         .then((url) => {
             // `url` is the download URL for 'images/stars.jpg'
 
